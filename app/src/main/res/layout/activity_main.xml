@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:background="@drawable/back_forest_0"
+        android:fadingEdge="vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_layer">
+
+        <TextView
+            android:id="@+id/mins_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/neon_ai"
+            android:textColor="#E8F1F2"
+            android:textSize="78sp"
+            app:layout_constraintBottom_toTopOf="@+id/min_just_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/min_just_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="@font/neon_ai"
+            android:text="@string/mins_left"
+            android:textColor="#A2A392"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toTopOf="@+id/time_layer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/play_icon"
+            android:backgroundTint="#F8F4E3"
+            android:contentDescription="@string/controls_of_the_pomodoro_timer"
+            android:elevation="8dp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/time_layer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/overlay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Activity"
+            />
+
+    </LinearLayout>
+
+    <com.RichGuy1.pomodoro.CustomViews.ClockViewComponent
+        android:id="@+id/time_layer"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#000512"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="mins_left">Mins left</string>
+    <string name="controls_of_the_pomodoro_timer">Controls of the pomodoro timer.</string>
+    <string name="hours_completed">Hours Completed</string>
+    <string name="mark_as_complete">Mark as Complete</string>
+</resources>
